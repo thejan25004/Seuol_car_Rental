@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reservation_bill" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3337d876-d17a-47ed-bd34-7847384fbbda">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (8)"/>
+	<parameter name="reservationId" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    r.reservationId,
+    r.reservationDate,
+    r.returnDate,
+    c.name AS customerName,
+    c.bailVehicleNm,
+    v.vehicleId,
+    v.currentMilage,
+    v.bookingCost,
+    v.numberPlate
+FROM
+    Reservations r
+    JOIN customer c ON r.customerld = c.customerld
+    JOIN ReservationDetails rd ON r.reservationId = rd.reservationId
+    JOIN Vehicles v ON rd.vehicleId = v.vehicleId
+WHERE
+    r.reservationId = $P{reservationId}  ]]>
+	</queryString>
+	<field name="reservationId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="reservationId"/>
+		<property name="com.jaspersoft.studio.field.label" value="reservationId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservations"/>
+	</field>
+	<field name="reservationDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="reservationDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="reservationDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservations"/>
+	</field>
+	<field name="returnDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="returnDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="returnDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservations"/>
+	</field>
+	<field name="customerName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="customerName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="bailVehicleNm" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bailVehicleNm"/>
+		<property name="com.jaspersoft.studio.field.label" value="bailVehicleNm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="vehicleId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicleId"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicleId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicles"/>
+	</field>
+	<field name="currentMilage" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="currentMilage"/>
+		<property name="com.jaspersoft.studio.field.label" value="currentMilage"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicles"/>
+	</field>
+	<field name="bookingCost" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="bookingCost"/>
+		<property name="com.jaspersoft.studio.field.label" value="bookingCost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicles"/>
+	</field>
+	<field name="numberPlate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="numberPlate"/>
+		<property name="com.jaspersoft.studio.field.label" value="numberPlate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicles"/>
+	</field>
+	<group name="reservationId">
+		<groupExpression><![CDATA[$F{reservationId}]]></groupExpression>
+	</group>
+	<group name="reservationDate">
+		<groupExpression><![CDATA[$F{reservationDate}]]></groupExpression>
+	</group>
+	<group name="returnDate">
+		<groupExpression><![CDATA[$F{returnDate}]]></groupExpression>
+	</group>
+	<group name="customerName">
+		<groupExpression><![CDATA[$F{customerName}]]></groupExpression>
+	</group>
+	<group name="bailVehicleNm">
+		<groupExpression><![CDATA[$F{bailVehicleNm}]]></groupExpression>
+	</group>
+	<group name="vehicleId">
+		<groupExpression><![CDATA[$F{vehicleId}]]></groupExpression>
+	</group>
+	<group name="currentMilage">
+		<groupExpression><![CDATA[$F{currentMilage}]]></groupExpression>
+	</group>
+	<group name="bookingCost">
+		<groupExpression><![CDATA[$F{bookingCost}]]></groupExpression>
+	</group>
+	<group name="numberPlate">
+		<groupExpression><![CDATA[$F{numberPlate}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="410" height="30" uuid="51eee7ba-991a-4071-b0b7-1fb131121cf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEOUL LUXARY & NORMAL CAR RENTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="29" width="230" height="20" uuid="66b81f0b-190c-494a-b207-0a8b7ce955fa"/>
+				<textElement>
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[No 12 , Colombo Road , Maradana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="49" width="300" height="20" uuid="7f1aa17e-19ed-4e1b-889b-f8baa945c567"/>
+				<textElement>
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Contact Us - 0769378524 / 091-223-1287]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="79" width="60" height="20" uuid="8a319538-33e3-4f00-91fe-44f580a04269"/>
+				<textElement>
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Date -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="69" width="160" height="30" uuid="6f4dc133-72c9-418e-a299-6f09a73f3d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3de06dc-0fbc-49e8-b387-4a4e7823f4e9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reservationDate}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="660" y="8" width="111" height="89" uuid="d55d7fba-646d-49fa-9d41-f830d23cf06f"/>
+				<imageExpression><![CDATA["C:/Users/DELL/Ijse doc/Seuol_car_Rental/src/main/resources/images/bing_generated_qrcode.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="791" height="52" uuid="11d89439-e42b-4f30-99a2-f483c12f2dfa"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Receipt For Vehicle Reservation]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="30" width="100" height="30" uuid="c9d46c0f-3853-4b06-9ae2-f3f6ce8fcb66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b152a76e-e3af-4879-9698-d2034c9b91b3"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Reservation Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="35" width="119" height="20" uuid="fd0db579-f04f-46c3-ab48-b4863e486bdf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b152a76e-e3af-4879-9698-d2034c9b91b3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reservationId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="510" y="35" width="140" height="30" uuid="ce2cba00-8533-4ae9-8e69-48c90659e4dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3de06dc-0fbc-49e8-b387-4a4e7823f4e9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Reservation Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="630" y="35" width="140" height="30" uuid="9f94c1ea-8714-4d0e-a9f1-8348968ac55d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3de06dc-0fbc-49e8-b387-4a4e7823f4e9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reservationDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="206" y="5" width="338" height="20" uuid="d192563f-db31-40f2-b8f7-ce37016de601"/>
+				<textElement>
+					<font fontName="Consolas" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Welcome to seoul Luxary & Normal Car Rental]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="328" splitType="Stretch">
+			<textField>
+				<reportElement x="520" y="196" width="140" height="30" uuid="e574e3ad-5c6a-491e-91fe-7f14607860cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29099d1d-70d4-404f-acfd-b13b9c16d4c8"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{returnDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="10" width="160" height="30" uuid="18ca6f68-e256-45a4-9e00-7b90d58a177d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6783a793-338b-4da2-96a9-cf75727cb036"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="30" width="160" height="30" uuid="c68900b4-c976-4e51-ba82-b338cedca562">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a81380e3-0617-49fb-85b4-24197896b7dd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bailVehicleNm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="70" width="100" height="30" uuid="8d69a8a2-4950-4a7a-b995-5654bbb91b6f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a7d515b-c8f9-4d80-9d67-e46b4765a972"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicleId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="166" width="150" height="30" uuid="e82fef2d-8d30-4466-8a34-7ab4f1c384c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3d2d265-fa21-4fd4-8507-6a868147963b"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currentMilage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="226" width="130" height="30" uuid="4973031a-f6a7-45ea-a167-6f42baaecbb3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4d13095-98c7-4aa8-96c4-9d671c0cc7fe"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingCost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="136" width="150" height="30" uuid="61eeae04-141b-4b0a-affe-80d950537ce4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac29fb98-ef38-4c30-8224-d8c81839815a"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numberPlate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="10" width="120" height="30" uuid="ecfebba2-3c04-4656-8f52-de3e2c200c6d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6783a793-338b-4da2-96a9-cf75727cb036"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Customer Name    -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="30" width="130" height="30" uuid="9decfb0f-7229-421d-9646-6b05e7e0d269">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a81380e3-0617-49fb-85b4-24197896b7dd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Bail Vehicle Nm   -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="70" width="120" height="30" uuid="616e2707-726a-41a7-984d-85bb88eb5226">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a7d515b-c8f9-4d80-9d67-e46b4765a972"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Vehicle Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="136" width="199" height="30" uuid="b2370e54-9dca-4390-9646-2798140ea4d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac29fb98-ef38-4c30-8224-d8c81839815a"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Vehicle number Plate    -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="166" width="198" height="30" uuid="041670eb-824d-4465-8df0-41c3b20d04e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3d2d265-fa21-4fd4-8507-6a868147963b"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Current Milage          -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="226" width="198" height="30" uuid="7ae0e7fa-7020-44fe-9609-887ab61d96ac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4d13095-98c7-4aa8-96c4-9d671c0cc7fe"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Booking Cost            -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="196" width="198" height="30" uuid="25111801-933e-4c67-b5f2-604f16e49845">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29099d1d-70d4-404f-acfd-b13b9c16d4c8"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Return Date             -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="267" width="198" height="20" uuid="4d0ac73b-72e4-4599-b879-0828e9663db2"/>
+				<textElement>
+					<font fontName="Consolas" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cost For Reservtion - ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="530" y="267" width="130" height="18" uuid="62329092-7508-41b6-af05-0997da9bfb73">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4d13095-98c7-4aa8-96c4-9d671c0cc7fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Consolas" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingCost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="290" width="220" height="20" uuid="91f51fa9-f3c6-44eb-be5e-26f68172fed1"/>
+				<textElement>
+					<font fontName="Consolas" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You & Have A Nice Day]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="90" width="229" height="159" uuid="eb474988-99ff-45cf-a942-9e70b3bf1d68"/>
+				<imageExpression><![CDATA["C:/Users/DELL/Ijse doc/Seuol_car_Rental/src/main/resources/images/1_yYngyhylK-5g5jescII43A.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userSettingsAnchorpeople" prefHeight="595.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.UserSettingFormController">
+   <children>
+      <Circle fill="WHITE" layoutX="672.0" layoutY="372.0" radius="156.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="369.0" fitWidth="512.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/printing-feature-one.png" />
+         </image>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="14.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-user-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-user-30.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserName" layoutX="73.0" layoutY="401.0" prefHeight="44.0" prefWidth="379.0" promptText="Input Your User Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-passcodes-50.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtPassword" layoutX="73.0" layoutY="467.0" prefHeight="44.0" prefWidth="379.0" promptText="Input Your New Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Button layoutX="109.0" layoutY="540.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #00008b; -fx-background-radius: 6;" text="     Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="291.0" layoutY="539.0" mnemonicParsing="false" onAction="#btnOnActionDelete" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #e60026; -fx-background-radius: 6;" text="         Delete Users" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="514.0" fitWidth="369.0" layoutX="495.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/how-to-build-a-sales-funnel-from-scratch.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserId" layoutX="73.0" layoutY="335.0" prefHeight="44.0" prefWidth="379.0" promptText="Input User ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="502.0" layoutY="53.0" prefHeight="58.0" prefWidth="243.0" text="Welcome To ">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="651.0" layoutY="119.0" prefHeight="58.0" prefWidth="140.0" text="Seoul " textFill="#072cff">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="127.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-confirm-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="300.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-delete-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

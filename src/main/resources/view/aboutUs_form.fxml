@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainAnchopane" prefHeight="595.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.AboutUsFormController">
+   <children>
+      <Label layoutX="24.0" layoutY="17.0" prefHeight="366.0" prefWidth="829.0" style="-fx-background-color: #778ba5; -fx-background-radius: 15;" />
+      <Text layoutX="94.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Seuol Car Rental, your trusted partner for all your vehicle rental needs. Whether you're planning a business trip, a leisurely getaway, a special occasion, or simply need a reliable car for daily use, we are here to provide top-notch rental services. Our diverse fleet of well-maintained vehicles ensures that you have the perfect ride for any occasion. With a commitment to customer satisfaction, we offer competitive rates, flexible rental options, and exceptional support. At Seuol Car Rental, we make your journey our priority, ensuring a smooth and enjoyable rental experience from start to finish. Choose us for unparalleled convenience, reliability, and quality in vehicle rentals." textAlignment="CENTER" wrappingWidth="687.13671875">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label layoutX="350.0" layoutY="28.0" prefHeight="63.0" prefWidth="175.0" text="About Us" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="398.0" prefHeight="179.0" prefWidth="440.0" style="-fx-background-color: #778ba5; -fx-background-radius: 15;" />
+      <ImageView fitHeight="147.0" fitWidth="327.0" layoutX="34.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Uploading-cloud1-1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="488.0" layoutY="398.0" prefHeight="179.0" prefWidth="365.0" style="-fx-background-color: #778ba5; -fx-background-radius: 15;" />
+      <Label layoutX="195.0" layoutY="421.0" prefHeight="37.0" prefWidth="221.0" text="seoul@carsrentaling.com">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="469.0" prefHeight="37.0" prefWidth="200.0" text="+94 916798231">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="515.0" prefHeight="37.0" prefWidth="282.0" text="No 12 , Colombo Road , Maradana">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="339.0" layoutX="501.0" layoutY="409.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/car.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

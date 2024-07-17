@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainAnchopane" prefHeight="734.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.SupplierFormController">
+   <children>
+      <AnchorPane fx:id="main2AnchopaneSupplier" layoutY="2.0" prefHeight="732.0" prefWidth="940.0">
+         <children>
+            <Label layoutX="-4.0" layoutY="-7.0" prefHeight="66.0" prefWidth="949.0" style="-fx-background-color: #778ba5;" />
+            <Text layoutX="350.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Form Overview" wrappingWidth="254.9830722808838">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="11.0" layoutY="72.0" prefHeight="352.0" prefWidth="918.0" style="-fx-background-color: #778ba5; -fx-background-radius: 10;" />
+            <TableView fx:id="supplierTable" layoutX="30.0" layoutY="126.0" onMouseClicked="#mouseClickOnAction" prefHeight="278.0" prefWidth="878.0" stylesheets="@../style/table.css">
+               <columns>
+                  <TableColumn fx:id="colSupplierId" prefWidth="144.0" text="supplierId" />
+                  <TableColumn fx:id="colName" prefWidth="130.0" text="name" />
+                  <TableColumn fx:id="colContact" prefWidth="156.0" text="contact" />
+                  <TableColumn fx:id="colSpecialCar" prefWidth="141.0" text="specialCar" />
+                  <TableColumn fx:id="colSpecialCarCost" prefWidth="135.0" text="specialCarCost" />
+                  <TableColumn fx:id="colVehicleId" prefWidth="187.0" text="vehicleId" />
+               </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="444.0" prefHeight="278.0" prefWidth="479.0" style="-fx-background-color: #778ba5; -fx-background-radius: 10;" />
+            <Label layoutX="37.0" layoutY="465.0" prefHeight="26.0" prefWidth="99.0" text="supplierId :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSupplierId" layoutX="37.0" layoutY="491.0" onAction="#txtSearchOnAction" onKeyReleased="#txtSupplierIDOnKeyReleased" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Label layoutX="260.0" layoutY="465.0" prefHeight="26.0" prefWidth="99.0" text="contact :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtContact" layoutX="241.0" layoutY="491.0" onKeyReleased="#txtSupplierContactOnKeyReleased" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Label layoutX="260.0" layoutY="570.0" prefHeight="26.0" prefWidth="117.0" text="vehicleId :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtVehicleId" layoutX="241.0" layoutY="593.0" onAction="#vehicleSearchOnAction" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Label layoutX="37.0" layoutY="570.0" prefHeight="26.0" prefWidth="99.0" text="name :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtname" layoutX="37.0" layoutY="593.0" onKeyReleased="#txtSupplierNameOnKeyReleased" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Button layoutX="37.0" layoutY="666.0" mnemonicParsing="false" onAction="#btnBackToDashBoard" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841;" text="        Dashboard" textFill="#fff4f4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="203.0" layoutY="666.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841;" text="Save" textFill="#fff4f4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="353.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841;" text="Update" textFill="#fff4f4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="37.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Details" wrappingWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="223.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-save-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="368.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-update-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="50.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-dashboard-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="289.0" fitWidth="399.0" layoutX="517.0" layoutY="427.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/original-407b2bc3a31fed948bca2b6776587692%20(1).jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="512.0" layoutY="465.0" prefHeight="26.0" prefWidth="117.0" text="specialCarCost :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSpecialCarCost" layoutX="512.0" layoutY="491.0" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Label layoutX="718.0" layoutY="465.0" prefHeight="26.0" prefWidth="99.0" text="specialCar :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSpecialCar" layoutX="715.0" layoutY="491.0" prefHeight="26.0" prefWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Button layoutX="566.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841;" text="Delete" textFill="#fff4f4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="754.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841;" text="Clear" textFill="#fff4f4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="768.0" layoutY="674.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-clear-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="581.0" layoutY="675.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-delete-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

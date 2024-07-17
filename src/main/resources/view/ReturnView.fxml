@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="732.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ReturnViewController">
+   <children>
+      <AnchorPane fx:id="main2Anchopane" layoutX="4.0" prefHeight="732.0" prefWidth="940.0">
+         <children>
+            <Label layoutX="-4.0" prefHeight="61.0" prefWidth="949.0" style="-fx-background-color: #778ba5;" />
+            <Text layoutX="343.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Overview" wrappingWidth="254.9830722808838">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="15.0" layoutY="74.0" prefHeight="637.0" prefWidth="918.0" style="-fx-background-color: #778ba5; -fx-background-radius: 15;" />
+            <TableView fx:id="tableReturn" layoutX="37.0" layoutY="126.0" prefHeight="390.0" prefWidth="694.0">
+               <columns>
+                  <TableColumn fx:id="colReturnId" prefWidth="108.0" text="returnId" />
+                  <TableColumn fx:id="colAfterRideMilage" prefWidth="152.0" text="afterRideMilage" />
+                  <TableColumn fx:id="colLateReturnCharge" prefWidth="157.0" text="lateReturnCharge" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="141.0" text="customerld" />
+                  <TableColumn fx:id="colReservationId" prefWidth="141.0" text="reservationId" />
+               </columns>
+            </TableView>
+            <Button layoutX="78.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnBackToDashBoard" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841; -fx-background-radius: 8;" text="    DashBoard" textFill="#fcfcfc">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="78.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Details" wrappingWidth="156.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="88.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-dashboard-24.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="750.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" wrappingWidth="52.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="810.0" layoutY="17.0" prefHeight="27.0" prefWidth="109.0" textFill="#00dd59">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="DetailsTable" layoutX="741.0" layoutY="126.0" prefHeight="390.0" prefWidth="178.0">
+               <columns>
+                  <TableColumn fx:id="colVehicleId" prefWidth="177.0" text="vehicleId" />
+               </columns>
+            </TableView>
+            <Button layoutX="257.0" layoutY="582.0" mnemonicParsing="false" onAction="#btnBackReturnForm" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #1c2841 #1c2841; -fx-background-radius: 8;" text="ADD" textFill="#fcfcfc">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="270.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-new-ticket-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="304.0" fitWidth="449.0" layoutX="481.0" layoutY="432.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/cubes-team-management-in-conference-room.gif" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

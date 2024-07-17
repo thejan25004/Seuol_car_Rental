@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchopaneRegisteration" prefHeight="732.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.RegisterationFormController">
+   <children>
+      <ImageView fitHeight="732.0" fitWidth="1102.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Desktop-1(3).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="523.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-user-30.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtuserId" layoutX="571.0" layoutY="50.0" prefHeight="43.0" prefWidth="290.0" promptText="Input Your User Id Here" />
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="523.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-user-30.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="928.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnRegisterartion" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #00008b;" text="       Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="933.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-logout-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="512.0" fitWidth="759.0" layoutX="329.0" layoutY="211.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/hexagonal-carbon-atom-grid-properties-innovative-computation-software-laser-technologies-graphene-technologies-quantum-computing-metaphors-vector.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtpassword" layoutX="571.0" layoutY="204.0" prefHeight="43.0" prefWidth="290.0" promptText="Input Your User Id Here" />
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="523.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-passcodes-50.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtusername" layoutX="571.0" layoutY="127.0" prefHeight="43.0" prefWidth="290.0" promptText="Input Your User Id Here" />
+      <ImageView fitHeight="425.0" fitWidth="486.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/programmer-amico-f604431dee3e50f2761f8fe9a93f816d.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="469.0" prefHeight="58.0" prefWidth="243.0" text="Welcome To ">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="469.0" prefHeight="58.0" prefWidth="140.0" text="Seoul " textFill="#000060">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="469.0" prefHeight="58.0" prefWidth="140.0" text="Cars">
+         <font>
+            <Font name="Consolas Bold" size="40.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="256.0" layoutY="561.0" onAction="#btnActionBackToLoginFrm" prefHeight="26.0" prefWidth="182.0" text="Back To Login Form" textFill="#2e74ff" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Text layoutX="24.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do You want to back Login Form ?" wrappingWidth="234.330078125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="861.0" layoutY="713.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager : Mr.Chathuranga Dinesh" wrappingWidth="219.330078125">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
